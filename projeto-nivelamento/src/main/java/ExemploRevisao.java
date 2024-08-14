@@ -11,10 +11,23 @@ public class ExemploRevisao {
         Double altura = 1.55;
         Boolean bloqueado = false;
 
-        System.out.println
-                ("Meu nome é " + nome +
-                        ", minha altura é " + altura +
-                        ", e minha idade é " + idade);
+        //Somente println
+        System.out.println(
+                "Meu nome é " + nome + ", minha altura é " + altura + "\n e minha idade é " + idade
+        );
+
+        //Println usando interpolação
+        System.out.println(
+                "Meu nome é %s, minha altura é %.2f e minha idade é %d".formatted(nome, altura, idade)
+        );
+
+        //Println usando interpolação e text block
+        System.out.println("""
+                Nome: %s
+                Idade: %d
+                Altura: %.2f
+                Nome do Pet: %s
+                """.formatted(nome, idade, altura, "Caramelo"));
 
         String nomePet;
         nomePet = "Teste";
